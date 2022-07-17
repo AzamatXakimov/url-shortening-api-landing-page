@@ -1,3 +1,10 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
+
 /* :root{
 
 } */
@@ -32,12 +39,18 @@ img{
 }
 
 *{
-    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
 }
 
 body{
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;  
-    flex-direction: column;
+    -webkit-box-orient: vertical;  
+    -webkit-box-direction: normal;  
+        -ms-flex-direction: column;  
+            flex-direction: column;
     height: 100%;
     margin: 0;
     font-family: "Poppins" , "Arial" , sans-serif;
@@ -59,8 +72,12 @@ body{
 }
 
 .header-box {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    align-items: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
 }
 
 /* .header-logo {
@@ -76,8 +93,12 @@ body{
 }
 
 .headernav-list {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    align-items: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     margin: 0;
     padding: 0;
     list-style: none;
@@ -97,6 +118,8 @@ body{
     text-decoration: none;
     
     color: #9e9aa8;
+    -webkit-transition: 0.3s ease;
+    -o-transition: 0.3s ease;
     transition: 0.3s ease;
 }
 .headernav-item-link:hover{
@@ -104,8 +127,12 @@ body{
 }
 
 .header-linkbox {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    align-items: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
 }
 
 .header-linkbox-login {
@@ -131,6 +158,8 @@ body{
     color: #fff;
     background-color: #2bd0d0;
     border-radius: 28px;
+    -webkit-transition: 0.3s ease;
+    -o-transition: 0.3s ease;
     transition: 0.3s ease;
 }
 .header-linkbox-sing-up:hover{
@@ -138,7 +167,9 @@ body{
 }
 
 .site-main {
-    flex-grow: 1;
+    -webkit-box-flex: 1;
+        -ms-flex-positive: 1;
+            flex-grow: 1;
 }
 
 .hero-section {
@@ -191,6 +222,8 @@ body{
     color: #fff;
     background-color: #2bd0d0;
     border-radius: 28px;
+    -webkit-transition: 0.3s ease;
+    -o-transition: 0.3s ease;
     transition: 0.3s ease;
 }
 .button-link:hover{
@@ -215,8 +248,12 @@ body{
 
 
 .url-search-form {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    align-items: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
 }
 
 .url-input-zone {
@@ -237,6 +274,54 @@ body{
     
     mix-blend-mode: normal;
 }
+.url-input-zone::-webkit-input-placeholder {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 36px;
+    
+    letter-spacing: 0.15px;
+    
+    color: #34313D;
+    
+    mix-blend-mode: normal;
+    opacity: 0.5;
+}
+.url-input-zone::-moz-placeholder {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 36px;
+    
+    letter-spacing: 0.15px;
+    
+    color: #34313D;
+    
+    mix-blend-mode: normal;
+    opacity: 0.5;
+}
+.url-input-zone:-ms-input-placeholder {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 36px;
+    
+    letter-spacing: 0.15px;
+    
+    color: #34313D;
+    
+    mix-blend-mode: normal;
+    opacity: 0.5;
+}
+.url-input-zone::-ms-input-placeholder {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 36px;
+    
+    letter-spacing: 0.15px;
+    
+    color: #34313D;
+    
+    mix-blend-mode: normal;
+    opacity: 0.5;
+}
 .url-input-zone::placeholder {
     font-weight: 500;
     font-size: 20px;
@@ -249,6 +334,12 @@ body{
     mix-blend-mode: normal;
     opacity: 0.5;
 }
+.url-input-zone:not(:-moz-placeholder-shown):not(:focus):invalid{
+    border: 3px solid #f46363;
+}
+.url-input-zone:not(:-ms-input-placeholder):not(:focus):invalid{
+    border: 3px solid #f46363;
+}
 .url-input-zone:not(:placeholder-shown):not(:focus):invalid{
     border: 3px solid #f46363;
 }
@@ -256,8 +347,13 @@ body{
     border: 3px solid #f46363;
 } */
 .url-search-box-inputbox{
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
 }
 .url-search-box-inputbox-minibox{
     font-weight: 500;
@@ -268,6 +364,12 @@ body{
     
     color: #F46363;
     opacity: 0;
+}
+.url-input-zone:not(:-moz-placeholder-shown):not(:focus):invalid ~ .url-search-box-inputbox-minibox{
+    opacity: 1;
+}
+.url-input-zone:not(:-ms-input-placeholder):not(:focus):invalid ~ .url-search-box-inputbox-minibox{
+    opacity: 1;
 }
 .url-input-zone:not(:placeholder-shown):not(:focus):invalid ~ .url-search-box-inputbox-minibox{
     opacity: 1;
@@ -289,6 +391,8 @@ body{
     border: none;
     background-color: #2bd0d0;
     border-radius: 10px;
+    -webkit-transition: 0.3s ease;
+    -o-transition: 0.3s ease;
     transition: 0.3s ease;
 }
 .url-serch-form-button:hover{
@@ -334,8 +438,12 @@ body{
 
 .statistic-list {
     position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    align-items: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     width: 1110px;
     margin: 0;
     padding: 0;
@@ -431,9 +539,16 @@ body{
 }
 
 .boost-box {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     width: 540px;
     margin-right: auto;
     margin-left: auto;
@@ -463,6 +578,8 @@ body{
 }
 
 .footer-box {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
 }
 
@@ -511,6 +628,8 @@ body{
     letter-spacing: -0.234375px;
     
     color: #bfbfbf;
+    -webkit-transition: 0.3s ease;
+    -o-transition: 0.3s ease;
     transition: 0.3s ease;
 }
 .footer-link:hover {
@@ -528,6 +647,8 @@ body{
 }
 
 .footer-logo-list {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     margin: 0;
     padding: 0;
@@ -543,6 +664,8 @@ body{
 
 .footer-logo-link {
     color: #ffff;
+    -webkit-transition: 0.3s ease;
+    -o-transition: 0.3s ease;
     transition: 0.3s ease;
 }
 .footer-logo-link:hover {
